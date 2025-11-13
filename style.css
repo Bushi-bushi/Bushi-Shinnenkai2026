@@ -99,6 +99,10 @@ header h1 {
     margin-bottom: 1rem;
 }
 
+.ticket-card .card-text {
+    color: #FFFFFF; /* 説明文を白文字に */
+}
+
 .ticket-card .card-footer {
     background-color: transparent;
     border-top: none;
