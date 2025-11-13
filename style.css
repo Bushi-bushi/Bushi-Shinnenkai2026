@@ -1,0 +1,191 @@
+:root {
+    --primary-color: #1a222c; /* 深い藍墨 */
+    --secondary-color: #d35400; /* アクセントの赤褐色 */
+    --background-color: #111827; /* 非常に濃い藍色 */
+    --text-color: #e5e7eb; /* 薄いグレー */
+    --gold-color: #c5a34c; /* 少し落ち着いた金色 */
+    --card-bg: #1f2937; /* カード背景色 */
+    --border-color: #374151; /* ボーダー色 */
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--background-color); /* 背景色をダークに */
+    background-image: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%); /* 微妙なグラデーションを追加 */
+    background-attachment: fixed;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+header {
+    background-color: transparent; /* ヘッダー背景を透明に */
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color); /* ボーダーを細く、色を変更 */
+}
+
+header h1 {
+    font-family: 'Shippori Mincho', serif;
+    color: var(--text-color); /* テキスト色を明るく */
+    text-shadow: 0 0 15px rgba(229, 231, 235, 0.2); /* テキストシャドウを調整 */
+}
+
+#hero {
+    /* オーバーレイを濃くしてテキストの可読性を向上 */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1583012508343-3b414a139587?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: .5rem; /* 角を丸く */
+}
+
+#hero .btn-primary {
+    background-color: var(--gold-color); /* ボタン色を金色に */
+    border-color: var(--gold-color);
+    color: var(--primary-color); /* ボタンテキスト色をダークに */
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+#hero .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(197, 163, 76, 0.3); /* ホバー時の影を金色に */
+}
+
+.section-title {
+    font-family: 'Shippori Mincho', serif;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 1rem;
+    color: var(--text-color); /* テキスト色を明るく */
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--gold-color); /* 下線の色を金色に */
+}
+
+.card {
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg); /* カード背景色をダークに */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* 影を調整 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.ticket-card .card-body {
+    padding-bottom: 1rem;
+}
+
+.ticket-card .card-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    color: var(--gold-color); /* タイトルを金色に */
+    margin-bottom: 1rem;
+}
+
+.ticket-card .card-footer {
+    background-color: transparent;
+    border-top: none;
+    padding-top: 0;
+}
+
+.btn-primary {
+    background-color: var(--gold-color);
+    border-color: var(--gold-color);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.btn-primary:hover {
+    background-color: #dcb75f;
+    border-color: #dcb75f;
+    color: var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+.btn-secondary:hover {
+    background-color: #b84900;
+    border-color: #b84900;
+}
+
+#details .card {
+    background-color: var(--card-bg);
+}
+#details .list-group-item {
+    background-color: transparent;
+    color: var(--text-color); /* リストアイテムのテキスト色を明るく */
+    border-bottom: 1px solid var(--border-color); /* 区切り線を追加 */
+}
+#details .list-group-item:last-child {
+    border-bottom: none;
+}
+
+footer {
+    background-color: transparent; /* フッター背景を透明に */
+    color: var(--text-color);
+    border-top: 1px solid var(--border-color); /* ボーダーを細く、色を変更 */
+    padding-top: 2rem;
+    margin-top: 4rem;
+}
+
+/* Modal Styles */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 24, 39, 0.8); /* 背景オーバーレイをダークに */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+.modal-content {
+    background-color: var(--card-bg); /* モーダル背景をダークに */
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    border: 1px solid var(--border-color);
+}
+
+.modal-content h4 {
+    font-family: 'Shippori Mincho', serif;
+    color: var(--gold-color); /* タイトルを金色に */
+    margin-bottom: 1rem;
+}
+
+.modal-content p {
+    margin-bottom: 1.5rem;
+    color: var(--text-color); /* テキスト色を明るく */
+}
+
+#about {
+    background-color: rgba(31, 41, 55, 0.7); /* --card-bg の色に透明度を追加 */
+    padding: 2rem;
+    border-radius: .5rem;
+    backdrop-filter: blur(10px); /* すりガラス効果を追加 */
+}
