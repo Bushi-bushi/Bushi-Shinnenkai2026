@@ -208,3 +208,9 @@ footer {
     border-radius: .5rem;
     backdrop-filter: blur(10px); /* すりガラス効果を追加 */
 }
+
+.highlight-text {
+    font-size: 1.25rem; /* Adjust as needed */
+    font-weight: bold;
+    color: var(--gold-color); /* Make it stand out */
+}
