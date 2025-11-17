@@ -214,3 +214,11 @@ footer {
     font-weight: bold;
     color: var(--gold-color); /* Make it stand out */
 }
+
+/* Presented by Logos */
+.presented-by-logo {
+    max-height: 80px; /* Adjust as needed */
+    width: auto;
+    object-fit: contain;
+    margin: 0 auto; /* Center the image if its width is less than its container */
+}
