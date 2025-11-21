@@ -233,26 +233,19 @@ footer {
     color: var(--text-color);
 }
 
-#about {
+/* Styles for generic section content block */
+.section-block-content {
     background-color: rgba(31, 41, 55, 0.7);
-    padding: 3rem 1.5rem; /* Horizontal padding halved */
+    padding: 3rem 1.5rem;
     border-radius: .5rem;
     backdrop-filter: blur(10px);
-    max-width: 80%; /* Added for centering */
-    margin: 0 auto; /* Added for centering */
-    text-align: justify; /* Added for justification */
 }
 
-.about-inner-content {
-    max-width: 90%; /* Adjust as needed */
+/* Styles for generic inner text wrapper */
+.section-inner-text {
+    max-width: 90%;
     margin: 0 auto;
-    padding: 1.5rem 0.75rem; /* Inner padding, horizontal halved */
-}
-
-.secretariat-inner-content {
-    max-width: 90%; /* Adjust as needed */
-    margin: 0 auto;
-    padding: 1.5rem 0.75rem; /* Inner padding, horizontal halved */
+    padding: 1.5rem 0.75rem;
     text-align: justify;
 }
 
